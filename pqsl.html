@@ -9,6 +9,7 @@
 
 PSQL
 
+/etc/postgresql/10/main/→ config file
 service postgresql 	→ savoir les service disponibles 
 
 sudo su postgres	→ se connecter sur le user « postgres » 
@@ -31,6 +32,10 @@ ALTER USER radu WITH SUPERUSER;			→ ajouter des attributes a un « user »
 ALTER USER « nom_user » WITH PASSWORD ''nouveau_mdp'' ; → changement MDP
 CREATE DATABASE nom_datebase;			→ par défaut le propriétaire est « postgres » 
 CREATE DATABASE app OWNER radu;		
+GRANT ALL PRIVILEGES ON DATABASE <nom_db> TO <nom_admin_user>;
+
+
+CREATE TABLE playground (equip_id serial PRIMARY KEY, type varchar (50) NOT NULL, color varchar (25) NOT NULL, location varchar(25) check (location in ('north', 'south', 'west', 'east', 'northeast', 'southeast', 'southwest', 'northwest')), install_date date);
 
 </body>
 
