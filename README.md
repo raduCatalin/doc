@@ -5,6 +5,11 @@
 service postgresql 	→ savoir les service disponibles
 ```
 ---------------
+Connexion au serveur Postgresql:
+```bash
+sudo -i -u postgres;
+```
+
 Ajouter un « user »:
 ```bash
 CREATE USER radu WITH PASSWORD 'test123';
