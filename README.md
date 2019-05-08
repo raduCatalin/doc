@@ -17,7 +17,7 @@ ALTER USER radu WITH SUPERUSER;
 
 Changement MDP pour un « user »:
 ```bash
-ALTER USER « nom_user » WITH PASSWORD 'nouveau_mdp';
+ALTER USER nom_user WITH PASSWORD 'nouveau_mdp';
 ```
 
 Creation d'une BDD (par défaut le propriétaire est « postgres ») :
@@ -27,7 +27,7 @@ CREATE DATABASE <nom_db>;
 
 Creation d'une BDD avec un propriétaire :
 ```bash
-CREATE DATABASE <nom_db> OWNER "user_name";	
+CREATE DATABASE <nom_db> OWNER user_name;	
 ```
 
 Changement du propriétaire de la BDD:
