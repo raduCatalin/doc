@@ -40,10 +40,10 @@ GRANT ALL PRIVILEGES ON DATABASE <nom_db> TO <nom_admin_user>;
 
 ```
 sudo su postgres	→ se connecter sur le user « postgres » 
-psql			        → se connecter à une bdd (accéder a la console psql) par défaut c'est« postgres »
+psql		        → se connecter à une bdd (accéder a la console psql) par défaut c'est« postgres »
 psql nom_database	→ se connecter à une bdd spécifique ; 
-\q			          → quitter console psql (exit the psql client )
-ctrl + d 		      → déconnexion 
+\q			→ quitter console psql (exit the psql client )
+ctrl + d 		→ déconnexion 
 ```
 
 <!-- Tableaux -->
