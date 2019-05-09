@@ -7,7 +7,7 @@
 
 **Agenda Jour 1**
 * toto: tutu
-
+```
 toto = (start, end, setClear) => {
   this.setState(({ event }) => ({
     event: {
@@ -18,7 +18,9 @@ toto = (start, end, setClear) => {
     }
   }));
 };
+```
 
+```
 const input = "951484596541141557316984781494999179677191938727971366274357874252166721759"
 const circularInput = `${input}${input.charAt(0)}`
-
+```
