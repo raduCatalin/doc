@@ -44,6 +44,7 @@ psql		        → se connecter à une bdd (accéder a la console psql) par défa
 psql nom_database	→ se connecter à une bdd spécifique ; 
 \q			→ quitter console psql (exit the psql client )
 ctrl + d 		→ déconnexion 
+sudo service postgresql stop → stop the server pslq 
 ```
 
 <!-- Tableaux -->
