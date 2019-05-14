@@ -9,7 +9,6 @@ let obj = { firstName: "John"};
 ```
 
 * **add new parameter**
-
 ```
 obj.lastName = "Anderson"
 console.log(obj);
@@ -31,33 +30,54 @@ console.log(obj);
 ```
 
 * **add new parameter (if)**
-
 ```
 console.log(obj);
 >{firstName: "John", lastName: "Anderson", age: 35, city: "Paris"}
 
-obj = { ...obj, ...(null && {zipCode: 0123}) }
+let code = null;
+
+obj = { 
+  ...obj, 
+  ...(code && {zipCode: code}) 
+}
 console.log(obj);
 >{firstName: "John", lastName: "Anderson", age: 35, city: "Paris"}
 
-obj = { ...obj, ...("toto" && {zipCode: 0123}) }
+code = 0123;
+
+obj = { 
+  ...obj, 
+  ...(code && {zipCode: code}) 
+}
 console.log(obj);
 >{firstName: "John", lastName: "Anderson", age: 35, city: "Paris", zipCode: 0123}
 
+```
+
+* **delete a parameter**
+```
+console.log(obj);
+>{firstName: "John", lastName: "Anderson", age: 35, city: "Paris", zipCode: 0123}
+
+delete obj.zipCode;
+>true
+console.log(obj);
+>{firstName: "John", lastName: "Anderson", age: 35, city: "Paris"}
 
 
+const { age, ...objWithoutAge} = obj;
+console.log(objWithoutAge);
+>{firstName: "John", lastName: "Anderson", city: "Paris"}
+```
 
+* **get in object (Getter)**
+```
+let item = { x:2, y:3, get z(){ return this.x +this.y}};
+console.log(item);
+>{x: 2, y: 3}
+item.z
+>5
 
-toto = (start, end, setClear) => {
-  this.setState(({ event }) => ({
-    event: {
-      ...event,
-      ...(start && { highlight_begin_at: start }),
-      ...(end && { highlight_end_at: end }),
-      ...(setClear && { highlight_begin_at: null, highlight_end_at: null })
-    }
-  }));
-};
 ```
 
 ```
@@ -76,22 +96,4 @@ const obj2 = {
         get path() {
           return obj2.owner.account.path + 'pack/';
         },
-      
-      },
-      invitation: {
-        get path() {
-          return obj2.owner.account.path + 'invitations/';
-        },
-   
-      },
-      users: {
-        get path() {
-          return obj2.owner.account.path + 'users/';
-        },
-        single: {
-          get path() {
-            return obj2.owner.account.users.path + ':id/';
-          },
-        }
-      }
-    }
+
