@@ -78,22 +78,34 @@ console.log(item);
 item.z
 >5
 
+
+const myObj = {
+  owner: {
+    path: '/',
+    account: {
+      get path() {
+        return myObj.owner.path + 'account/';
+      },
+      pack: {
+        get path() {
+          return myObj.owner.account.path + 'pack/';
+        }
+      }
+    }
+  }
+};
+
+myObj.owner.path
+>"/"
+
+myObj.owner.account.path
+>"/account/"
+
+myObj.owner.account.pack.path
+>"/account/pack/"
 ```
 
 ```
 const input = "951484596541141557316984781494999179677191938727971366274357874252166721759"
 const circularInput = `${input}${input.charAt(0)}`
 ```
-
-const obj2 = {
-  owner: {
-    path: '/',
-    account: {
-      get path() {
-        return obj2.owner.path + 'account/';
-      },
-      pack: {
-        get path() {
-          return obj2.owner.account.path + 'pack/';
-        },
-
