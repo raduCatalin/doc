@@ -1,13 +1,53 @@
-#titltWORKSHOP Pack Com
+#Javascript
 
-**Obj** text
+**Object** 
 
 * **[Track 1]** 
 * **[Track 2]** 
-
-**Agenda Jour 1**
-* toto: tutu
 ```
+let obj = { firstName: "John"};
+```
+
+* **add new parameter**
+
+```
+obj.lastName = "Anderson"
+console.log(obj);
+>{firstName: "John", lastName: "Anderson"}
+
+obj.sex = obj.sex || "M";
+>"M"
+console.log(obj);
+{firstName: "John", lastName: "Anderson", age: 35, sex: "M"}
+
+obj["age"] = 35;
+>35
+console.log(obj);
+>{firstName: "John", lastName: "Anderson", age: 35}
+
+obj1 = { ...obj, ...{city: "Paris"} }
+console.log(obj);
+{firstName: "John", lastName: "Anderson", age: 35, sex: "M", city: "Paris"}
+```
+
+* **add new parameter (if)**
+
+```
+console.log(obj);
+>{firstName: "John", lastName: "Anderson", age: 35, city: "Paris"}
+
+obj = { ...obj, ...(null && {zipCode: 0123}) }
+console.log(obj);
+>{firstName: "John", lastName: "Anderson", age: 35, city: "Paris"}
+
+obj = { ...obj, ...("toto" && {zipCode: 0123}) }
+console.log(obj);
+>{firstName: "John", lastName: "Anderson", age: 35, city: "Paris", zipCode: 0123}
+
+
+
+
+
 toto = (start, end, setClear) => {
   this.setState(({ event }) => ({
     event: {
