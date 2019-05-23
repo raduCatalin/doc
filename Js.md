@@ -105,7 +105,25 @@ myObj.owner.account.pack.path
 
 
 **Array** 
+* **Remove duplicate items**
+```
+const myFunction = arr => [...new Set(arr)];
+myFunction([12, 163, 15, 15, 163, 100, 2, 8]);
 
+>[12, 163, 15, 100, 2, 8]
+```
+
+**Conditionals**
+```
+const obj = {a: 1, b: 2};
+let myValue;
+
+myValue = obj.d ? obj.d : null;
+
+//can be write
+
+myValue = (obj.a || null);
+```
 
 
 
