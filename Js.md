@@ -2,8 +2,6 @@
 
 **Object** 
 
-* **[Track 1]** 
-* **[Track 2]** 
 ```
 let obj = { firstName: "John"};
 ```
@@ -104,6 +102,24 @@ myObj.owner.account.path
 myObj.owner.account.pack.path
 >"/account/pack/"
 ```
+
+
+**Array** 
+
+
+
+
+**General JS** 
+
+* ypeof : a JavaScript unary operator used to  return a string that represents the primitive type of a variable,  don’t forget that typeof null will return “object”, and for the majority of object types (Array, Date, and others) will return also “object”.
+* constructor : is a property of the internal prototype property, which could be overridden by code.
+* instanceof : is another JavaScript operator that check in all the prototypes chain the constructor it returns true if it’s found and false if not.
+
+
+* var arr = ["a", "b", "c"];
+* typeof arr;   // return "object" 
+* arr  instanceof Array // true
+* arr.constructor();  //[]
 
 ```
 const input = "951484596541141557316984781494999179677191938727971366274357874252166721759"
