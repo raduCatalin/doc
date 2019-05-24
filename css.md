@@ -1,5 +1,5 @@
-**Color**
-* **RGB colors**
+# Color
+**RGB colors**
 * numeric value between 0 and 255
 * rgb(0,0,0)       => Black
 * rgb(255,255,255) => White
@@ -11,11 +11,11 @@
 * numeric value between 0 and 1
 * rgba(128,128,128,0.3);
 
-* **HEX colors**
+**HEX colors**
 * hash character (#) followed by either 6 or 3 characters/numbers
 * #000000 => Black
 * #000 => Black
 
-* **Named colors**
+**Named colors**
 * For a complete list of these colors
 * http://www.cssportal.com/css3-color-names/.
