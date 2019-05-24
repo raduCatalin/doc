@@ -8,8 +8,8 @@
 * rgb(0,255,255)   =>
 
 **Adding transparency**
-* numeric value between 0 and 1
-* rgba(128,128,128,0.3);
+numeric value between 0 and 1
+rgba(128,128,128,0.3);
 
 * **HEX colors**
 * hash character (#) followed by either 6 or 3 characters/numbers
