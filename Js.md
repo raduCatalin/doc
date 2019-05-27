@@ -147,7 +147,7 @@ myValue = (obj.a || null);
 
 
 **bind()**
-*bind() crée une nouvelle fonction
+* bind() crée une nouvelle fonction
 this.x = 9; // en dehors de tout contexte,
             // pour un navigateur, this est
             // l'objet window
@@ -170,7 +170,22 @@ boundGetX(); // 81
 
 
 
-**difference between var, let and const**
+**Difference between var, let and const**
+
+* LET 
+- la portée est limité à celle du bloc courant.
+- il n’est pas obligatoire de déclarer une variable avec sa valeur initiale
+- let maVar;
+
+* CONST 
+- La portée de const est celle du bloc, comme la déclaration let.
+- a besoin d’être déclaré avec une valeur initiale.
+- const CONFIG = 'maConfig';
+
+* VAR
+- la portée de la variable est celle du contexte dans lequel elle est déclarée (ex: contexte d'une fonction).
+- il n’est pas obligatoire de déclarer une variable avec sa valeur initiale
+- var maVar;
 
 **difference between "" and ''**
 
