@@ -76,6 +76,12 @@ console.log(item);
 item.z
 >5
 
+let module = {
+  x: 81,
+  getX: function() { return this.x; }
+};
+module.getX();
+>81
 
 const myObj = {
   owner: {
@@ -140,12 +146,35 @@ myValue = (obj.a || null);
 * arr.constructor();  //[]
 
 
-* bind()
+**bind()**
+*bind() crée une nouvelle fonction
+this.x = 9; // en dehors de tout contexte,
+            // pour un navigateur, this est
+            // l'objet window
+var module = {
+  x: 81,
+  getX: function() { return this.x; }
+};
+
+module.getX(); // 81
+
+var getX = module.getX;
+getX(); // 9, car ici, this fait référence à l'objet global
+
+// On crée une nouvelle fonction à laquelle on lie module en
+// tant que 'this'
+var boundGetX = getX.bind(module);
+boundGetX(); // 81
+
+
+
+
 
 **difference between var, let and const**
 
 **difference between "" and ''**
 
+**fonction generatrice**
 ```
 const input = "951484596541141557316984781494999179677191938727971366274357874252166721759"
 const circularInput = `${input}${input.charAt(0)}`
