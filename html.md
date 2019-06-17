@@ -1,4 +1,4 @@
 # HTML
 
-* **
-<base> définit l'URL de base à utiliser pour recomposer toutes les URL relatives dans le doc.
+
+* le tag '\<base>' définit l'URL de base à utiliser pour recomposer toutes les URL relatives dans le doc.
